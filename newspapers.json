@@ -1,0 +1,56 @@
+[
+    {
+        "name": "The Hindu",
+        "website": "https://www.thehindu.com",
+        "language": "English",
+        "type": "General"
+    },
+    {
+        "name": "Times of India",
+        "website": "https://timesofindia.indiatimes.com",
+        "language": "English",
+        "type": "General"
+    },
+    {
+        "name": "Dainik Bhaskar",
+        "website": "https://www.bhaskar.com",
+        "language": "Hindi",
+        "type": "General"
+    },
+    {
+        "name": "Hindustan Times",
+        "website": "https://www.hindustantimes.com",
+        "language": "English",
+        "type": "General"
+    },
+    {
+        "name": "Amar Ujala",
+        "website": "https://www.amarujala.com",
+        "language": "Hindi",
+        "type": "General"
+    },
+    {
+        "name": "Eenadu",
+        "website": "https://www.eenadu.net",
+        "language": "Telugu",
+        "type": "Regional"
+    },
+    {
+        "name": "Dinamalar",
+        "website": "https://www.dinamalar.com",
+        "language": "Tamil",
+        "type": "Regional"
+    },
+    {
+        "name": "Economic Times",
+        "website": "https://economictimes.indiatimes.com",
+        "language": "English",
+        "type": "Business"
+    },
+    {
+        "name": "Business Standard",
+        "website": "https://www.business-standard.com",
+        "language": "English",
+        "type": "Business"
+    }
+]
