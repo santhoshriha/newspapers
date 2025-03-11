@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Pulse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Drawer Menu -->
+        <div class="drawer-menu">
+            <div class="drawer-header">
+                <img src="https://via.placeholder.com/100" alt="News Pulse Logo" class="drawer-logo">
+                <h2>News Pulse</h2>
+                <button class="close-drawer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="drawer-nav">
+                <ul>
+                    <li class="drawer-item active" data-tab="newspapers">
+                        <i class="fas fa-newspaper"></i>
+                        <span>All Newspapers</span>
+                    </li>
+                    <li class="drawer-item active" data-tab="favorites">
+                        <i class="fas fa-heart"></i>
+                        <span>Favorites</span>
+                    </li>
+
+                    <!-- Language Categories -->
+                    <li class="drawer-item drawer-category active">
+                        <i class="fas fa-language"></i>
+                        <span>Languages</span>
+                    </li>
+                    <li class="drawer-item drawer-subcategory active" data-tab="language-english">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                    </li>
+                    <li class="drawer-item drawer-subcategory active" data-tab="language-hindi">
+                        <i class="fas fa-globe"></i>
+                        <span>Hindi</span>
+                    </li>
+                    <li class="drawer-item drawer-subcategory active" data-tab="language-telugu">
+                        <i class="fas fa-globe"></i>
+                        <span>Telugu</span>
+                    </li>
+                    <li class="drawer-item drawer-subcategory active" data-tab="language-tamil">
+                        <i class="fas fa-globe"></i>
+                        <span>Tamil</span>
+                    </li>
+
+                    <!-- Newspaper Categories -->
+                    <li class="drawer-item drawer-category active">
+                        <i class="fas fa-tags"></i>
+                        <span>Categories</span>
+                    </li>
+                    <li class="drawer-item drawer-subcategory active" data-tab="category-general">
+                        <i class="fas fa-newspaper"></i>
+                        <span>General News</span>
+                    </li>
+                    <li class="drawer-item drawer-subcategory active" data-tab="category-regional">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Regional News</span>
+                    </li>
+                    <li class="drawer-item drawer-subcategory active" data-tab="category-business">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Business News</span>
+                    </li>
+
+                    <!-- Additional Sections -->
+                    <li class="drawer-item active" data-tab="add-newspaper">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add Newspaper</span>
+                    </li>
+                    <li class="drawer-item active" data-tab="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </li>
+                    <li class="drawer-item active" data-tab="about">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About App</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="drawer-footer">
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <button class="open-drawer">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-content">
+                    <h1>News Pulse</h1>
+                    <!-- Removed heart icon from header -->
+                </div>
+                <div class="search-filter-container">
+                    <div class="search-container">
+                        <input type="text" id="search-bar" placeholder="Search newspapers...">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-icons">
+                        <div class="filter-icon" id="language-filter-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="filter-icon" id="category-filter-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div id="newspaper-list" class="grid"></div>
+                
+                <!-- Settings Section (Initially Hidden) -->
+                <div id="settings-section" class="settings-section" style="display: none;">
+                    <div class="add-newspaper-form">
+                        <h2>Add New Newspaper</h2>
+                        <form id="new-newspaper-form">
+                            <div class="form-group">
+                                <label for="newspaper-name">Newspaper Name:</label>
+                                <input type="text" id="newspaper-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newspaper-website">Website URL:</label>
+                                <input type="url" id="newspaper-website" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newspaper-language">Language:</label>
+                                <select id="newspaper-language" required>
+                                    <option value="">Select Language</option>
+                                    <option value="English">English</option>
+                                    <option value="Hindi">Hindi</option>
+                                    <option value="Telugu">Telugu</option>
+                                    <option value="Tamil">Tamil</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="newspaper-category">Category:</label>
+                                <select id="newspaper-category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="General">General</option>
+                                    <option value="Regional">Regional</option>
+                                    <option value="Business">Business</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="newspaper-logo">Logo URL (Optional):</label>
+                                <input type="url" id="newspaper-logo">
+                            </div>
+                            <button type="submit" class="add-newspaper-btn">Add Newspaper</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+
+            <nav class="bottom-nav">
+                <div class="nav-item active" data-tab="newspapers">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Newspapers</span>
+                </div>
+                <div class="nav-item" data-tab="favorites">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites</span>
+                </div>
+                <div class="nav-item" data-tab="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+            </nav>
+        </div>
+
+        <div class="filter-modal" id="language-filter-modal">
+            <div class="filter-modal-content">
+                <h2>Select Language</h2>
+                <select id="language-filter">
+                    <option value="All">All Languages</option>
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Telugu">Telugu</option>
+                    <option value="Tamil">Tamil</option>
+                </select>
+                <button class="close-modal">Close</button>
+            </div>
+        </div>
+
+        <div class="filter-modal" id="category-filter-modal">
+            <div class="filter-modal-content">
+                <h2>Select Category</h2>
+                <select id="category-filter">
+                    <option value="All">All Categories</option>
+                    <option value="General">General</option>
+                    <option value="Regional">Regional</option>
+                    <option value="Business">Business</option>
+                </select>
+                <button class="close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
