@@ -1,0 +1,392 @@
+[
+    {
+        "name": "The Hindu",
+        "website": "https://www.thehindu.com",
+        "language": "English",
+        "type": "General"
+    },
+    {
+        "name": "Times of India",
+        "website": "https://timesofindia.indiatimes.com",
+        "language": "English",
+        "type": "General"
+    },
+    {
+        "name": "Hindustan Times",
+        "website": "https://www.hindustantimes.com",
+        "language": "English",
+        "type": "General"
+    },
+    {
+        "name": "Economic Times",
+        "website": "https://economictimes.indiatimes.com",
+        "language": "English",
+        "type": "Business"
+    },
+    {
+        "name": "The Indian Express",
+        "website": "https://indianexpress.com",
+        "language": "English",
+        "type": "General"
+    },
+    {
+        "name": "Dainik Bhaskar",
+        "website": "https://www.bhaskar.com",
+        "language": "Hindi",
+        "type": "General"
+    },
+    {
+        "name": "Amar Ujala",
+        "website": "https://www.amarujala.com",
+        "language": "Hindi",
+        "type": "General"
+    },
+    {
+        "name": "Hindustan",
+        "website": "https://www.livehindustan.com",
+        "language": "Hindi",
+        "type": "General"
+    },
+    {
+        "name": "Navbharat Times",
+        "website": "https://navbharattimes.indiatimes.com",
+        "language": "Hindi",
+        "type": "General"
+    },
+    {
+        "name": "Jansatta",
+        "website": "https://www.jansatta.com",
+        "language": "Hindi",
+        "type": "Political"
+    },
+    {
+        "name": "Eenadu",
+        "website": "https://www.eenadu.net",
+        "language": "Telugu",
+        "type": "Regional"
+    },
+    {
+        "name": "Sakshi",
+        "website": "https://www.sakshi.com",
+        "language": "Telugu",
+        "type": "General"
+    },
+    {
+        "name": "Andhra Jyothi",
+        "website": "https://www.andhrajyothy.com",
+        "language": "Telugu",
+        "type": "Regional"
+    },
+    {
+        "name": "Namaste Telangana",
+        "website": "https://namastetelangana.com",
+        "language": "Telugu",
+        "type": "Regional"
+    },
+    {
+        "name": "Vaartha",
+        "website": "https://www.vaartha.com",
+        "language": "Telugu",
+        "type": "General"
+    },
+    {
+        "name": "Dinamalar",
+        "website": "https://www.dinamalar.com",
+        "language": "Tamil",
+        "type": "Regional"
+    },
+    {
+        "name": "Daily Thanthi",
+        "website": "https://www.dailythanthi.com",
+        "language": "Tamil",
+        "type": "General"
+    },
+    {
+        "name": "Dinakaran",
+        "website": "https://www.dinakaran.com",
+        "language": "Tamil",
+        "type": "General"
+    },
+    {
+        "name": "Makkal Kural",
+        "website": "https://www.makkalkural.com",
+        "language": "Tamil",
+        "type": "Political"
+    },
+    {
+        "name": "Malai Malar",
+        "website": "https://www.malaimalar.com",
+        "language": "Tamil",
+        "type": "Regional"
+    },
+    {
+        "name": "Prajavani",
+        "website": "https://www.prajavani.net",
+        "language": "Kannada",
+        "type": "General"
+    },
+    {
+        "name": "Vijaya Karnataka",
+        "website": "https://vijaykarnataka.com",
+        "language": "Kannada",
+        "type": "Regional"
+    },
+    {
+        "name": "Udayavani",
+        "website": "https://www.udayavani.com",
+        "language": "Kannada",
+        "type": "General"
+    },
+    {
+        "name": "Kannada Prabha",
+        "website": "https://www.kannadaprabha.com",
+        "language": "Kannada",
+        "type": "General"
+    },
+    {
+        "name": "Vishwavani",
+        "website": "https://www.vishwavani.news",
+        "language": "Kannada",
+        "type": "Regional"
+    },
+    {
+        "name": "Malayala Manorama",
+        "website": "https://www.manoramaonline.com",
+        "language": "Malayalam",
+        "type": "General"
+    },
+    {
+        "name": "Mathrubhumi",
+        "website": "https://www.mathrubhumi.com",
+        "language": "Malayalam",
+        "type": "General"
+    },
+    {
+        "name": "Kerala Kaumudi",
+        "website": "https://www.keralakaumudi.com",
+        "language": "Malayalam",
+        "type": "Regional"
+    },
+    {
+        "name": "Madhyamam",
+        "website": "https://www.madhyamam.com",
+        "language": "Malayalam",
+        "type": "Political"
+    },
+    {
+        "name": "Deepika",
+        "website": "https://www.deepika.com",
+        "language": "Malayalam",
+        "type": "Regional"
+    },
+    {
+        "name": "Anandabazar Patrika",
+        "website": "https://www.anandabazar.com",
+        "language": "Bengali",
+        "type": "General"
+    },
+    {
+        "name": "Ei Samay",
+        "website": "https://www.eisamay.com",
+        "language": "Bengali",
+        "type": "Regional"
+    },
+    {
+        "name": "Sangbad Pratidin",
+        "website": "https://www.sangbadpratidin.in",
+        "language": "Bengali",
+        "type": "General"
+    },
+    {
+        "name": "Bartaman",
+        "website": "https://www.bartamanpatrika.com",
+        "language": "Bengali",
+        "type": "Political"
+    },
+    {
+        "name": "Uttarbanga Sambad",
+        "website": "https://www.uttarbangsambad.com",
+        "language": "Bengali",
+        "type": "Regional"
+    },
+    {
+        "name": "Lokmat",
+        "website": "https://www.lokmat.com",
+        "language": "Marathi",
+        "type": "General"
+    },
+    {
+        "name": "Maharashtra Times",
+        "website": "https://maharashtratimes.com",
+        "language": "Marathi",
+        "type": "Regional"
+    },
+    {
+        "name": "Loksatta",
+        "website": "https://www.loksatta.com",
+        "language": "Marathi",
+        "type": "Political"
+    },
+    {
+        "name": "Pudhari",
+        "website": "https://www.pudhari.news",
+        "language": "Marathi",
+        "type": "Regional"
+    },
+    {
+        "name": "Sakal",
+        "website": "https://www.sakal.com",
+        "language": "Marathi",
+        "type": "General"
+    },
+    {
+        "name": "Divya Bhaskar",
+        "website": "https://www.divyabhaskar.co.in",
+        "language": "Gujarati",
+        "type": "General"
+    },
+    {
+        "name": "Sandesh",
+        "website": "https://www.sandesh.com",
+        "language": "Gujarati",
+        "type": "Regional"
+    },
+    {
+        "name": "Gujarat Samachar",
+        "website": "https://www.gujaratsamachar.com",
+        "language": "Gujarati",
+        "type": "General"
+    },
+    {
+        "name": "Akila Gujarat",
+        "website": "https://www.akilagujarati.com",
+        "language": "Gujarati",
+        "type": "Regional"
+    },
+    {
+        "name": "Janmabhoomi",
+        "website": "https://www.janmabhoomi.com",
+        "language": "Gujarati",
+        "type": "Political"
+    },
+    {
+        "name": "Punjabi Tribune",
+        "website": "https://www.punjabitribune.com",
+        "language": "Punjabi",
+        "type": "General"
+    },
+    {
+        "name": "Ajit",
+        "website": "https://www.ajitjalandhar.com",
+        "language": "Punjabi",
+        "type": "Regional"
+    },
+    {
+        "name": "Jagbani",
+        "website": "https://www.jagbani.punjabkesari.in",
+        "language": "Punjabi",
+        "type": "General"
+    },
+    {
+        "name": "Rozana Spokesman",
+        "website": "https://www.rozanaspokesman.com",
+        "language": "Punjabi",
+        "type": "Political"
+    },
+    {
+        "name": "Dainik Savera",
+        "website": "https://www.dainikavera.com",
+        "language": "Punjabi",
+        "type": "Regional"
+    },
+    {
+        "name": "Sambad",
+        "website": "https://sambad.in",
+        "language": "Odia",
+        "type": "General"
+    },
+    {
+        "name": "Dharitri",
+        "website": "https://dharitri.com",
+        "language": "Odia",
+        "type": "Regional"
+    },
+    {
+        "name": "Pragativadi",
+        "website": "https://pragativadi.com",
+        "language": "Odia",
+        "type": "General"
+    },
+    {
+        "name": "The Samaja",
+        "website": "https://thesamaja.com",
+        "language": "Odia",
+        "type": "Political"
+    },
+    {
+        "name": "Nirbhaya",
+        "website": "https://nirbhaya.com",
+        "language": "Odia",
+        "type": "Regional"
+    },
+    {
+        "name": "Asomiya Pratidin",
+        "website": "https://www.asomiyapratidin.in",
+        "language": "Assamese",
+        "type": "General"
+    },
+    {
+        "name": "Dainik Janambhumi",
+        "website": "https://www.dainikjanambhumi.in",
+        "language": "Assamese",
+        "type": "Regional"
+    },
+    {
+        "name": "Amar Asom",
+        "website": "https://www.amarasom.com",
+        "language": "Assamese",
+        "type": "General"
+    },
+    {
+        "name": "Sadin",
+        "website": "https://www.sadin.in",
+        "language": "Assamese",
+        "type": "Political"
+    },
+    {
+        "name": "Niyomiya Barta",
+        "website": "https://www.niyomiabarta.com",
+        "language": "Assamese",
+        "type": "Regional"
+    },
+    {
+        "name": "Urdu Times",
+        "website": "https://www.urdu-times.com",
+        "language": "Urdu",
+        "type": "General"
+    },
+    {
+        "name": "Inquilab",
+        "website": "https://www.inquilab.com",
+        "language": "Urdu",
+        "type": "Political"
+    },
+    {
+        "name": "Rashtriya Sahara",
+        "website": "https://www.rashtriyasahara.com",
+        "language": "Urdu",
+        "type": "General"
+    },
+    {
+        "name": "Siasat Daily",
+        "website": "https://www.siasat.com",
+        "language": "Urdu",
+        "type": "Regional"
+    },
+    {
+        "name": "Munsif Daily",
+        "website": "https://www.munsif.com",
+        "language": "Urdu",
+        "type": "Political"
+    }
+]
