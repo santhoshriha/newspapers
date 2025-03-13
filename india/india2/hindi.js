@@ -134,31 +134,104 @@ document.addEventListener('DOMContentLoaded', () => {
     addNewspaperForm.addEventListener('submit', async (event) => {
         event.preventDefault();
         
-        // Get form values
-        const name = document.getElementById('newspaper-name').value.trim();
-        const website = document.getElementById('newspaper-website').value.trim();
-        const language = document.getElementById('newspaper-language').value;
-        const type = document.getElementById('newspaper-type').value;
-        const logoFile = document.getElementById('newspaper-logo').files[0];
+        console.log('Add Newspaper Form Submission Started');
 
-        // Validate inputs
-        if (!name || !website) {
-            alert('कृपया सभी आवश्यक फ़ील्ड भरें');
+        // Get form elements with robust checking
+        const nameInput = document.getElementById('newspaper-name');
+        const websiteInput = document.getElementById('newspaper-website');
+        const typeInput = document.getElementById('newspaper-type');
+        const logoInput = document.getElementById('newspaper-logo');
+
+        // Log element references for debugging
+        console.log('Form Elements:', {
+            nameInput, 
+            websiteInput, 
+            typeInput, 
+            logoInput
+        });
+
+        // Validate element existence
+        const formElements = [
+            { element: nameInput, errorMessage: 'समाचार पत्र का नाम इनपुट नहीं मिला' },
+            { element: websiteInput, errorMessage: 'वेबसाइट URL इनपुट नहीं मिला' },
+            { element: typeInput, errorMessage: 'प्रकार इनपुट नहीं मिला' }
+        ];
+
+        // Check if all elements exist
+        const missingElements = formElements.filter(item => !item.element);
+        if (missingElements.length > 0) {
+            const errorMessages = missingElements.map(item => item.errorMessage);
+            console.error('Missing Form Elements:', errorMessages);
+            alert(errorMessages.join('\n'));
+            return;
+        }
+
+        // Get form values
+        const name = nameInput.value.trim();
+        const website = websiteInput.value.trim();
+        const type = typeInput.value;
+        const logoFile = logoInput.files[0];
+
+        // Log form values for debugging
+        console.log('Form Values:', {
+            name, 
+            website, 
+            type, 
+            logoFile: logoFile ? logoFile.name : 'No file selected'
+        });
+
+        // Comprehensive input validation
+        const errors = [];
+        
+        if (!name) {
+            errors.push('समाचार पत्र का नाम आवश्यक है');
+        }
+        
+        if (!website) {
+            errors.push('वेबसाइट URL आवश्यक है');
+        } else {
+            // URL validation
+            try {
+                new URL(website);
+            } catch (urlError) {
+                console.error('Invalid URL:', urlError);
+                errors.push('कृपया एक वैध URL दर्ज करें');
+            }
+        }
+
+        // Display errors if any
+        if (errors.length > 0) {
+            console.error('Validation Errors:', errors);
+            alert(errors.join('\n'));
             return;
         }
 
         try {
-            // Get favicon
-            const faviconUrl = await getFavicon(website);
+            // Get favicon with error handling
+            let faviconUrl;
+            try {
+                faviconUrl = await getFavicon(website);
+                console.log('Favicon URL:', faviconUrl);
+            } catch (faviconError) {
+                console.warn('Favicon fetch failed:', faviconError);
+                faviconUrl = 'https://via.placeholder.com/50?text=News';
+            }
 
             // Create new newspaper object
             const newNewspaper = {
                 name,
                 website,
-                language,
+                language: 'Hindi', // Default language
                 type,
                 image: logoFile ? URL.createObjectURL(logoFile) : faviconUrl
             };
+
+            console.log('New Newspaper Object:', newNewspaper);
+
+            // Validate newspaper object
+            if (!newNewspaper.name || !newNewspaper.website) {
+                throw new Error('Invalid newspaper data');
+            }
 
             // Add to added newspapers and save to local storage
             addedNewspapers.push(newNewspaper);
@@ -171,9 +244,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close modal and reset form
             addNewspaperModal.style.display = 'none';
             addNewspaperForm.reset();
+
+            // Optional: Show success message
+            alert('समाचार पत्र सफलतापूर्वक जोड़ा गया');
+
+            console.log('Newspaper Added Successfully');
         } catch (error) {
-            console.error('Error adding newspaper:', error);
-            alert('समाचार पत्र जोड़ने में त्रुटि');
+            console.error('Complete error adding newspaper:', error);
+            alert(`समाचार पत्र जोड़ने में त्रुटि: ${error.message}`);
         }
     });
 
