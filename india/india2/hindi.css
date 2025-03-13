@@ -294,6 +294,157 @@ body.dark-mode {
     color: var(--secondary-color-dark);
 }
 
+/* Add Newspaper Modal Styling */
+#add-newspaper-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#add-newspaper-modal .modal-content {
+    background-color: var(--card-background-light);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+    transform-origin: center;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.dark-mode #add-newspaper-modal .modal-content {
+    background-color: var(--card-background-dark);
+    color: var(--text-color-dark);
+}
+
+#add-newspaper-modal .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: var(--secondary-color-light);
+    cursor: pointer;
+    transition: color var(--transition-speed) ease;
+}
+
+.dark-mode #add-newspaper-modal .close-modal {
+    color: var(--secondary-color-dark);
+}
+
+#add-newspaper-modal .close-modal:hover {
+    color: var(--primary-color-light);
+}
+
+.dark-mode #add-newspaper-modal .close-modal:hover {
+    color: var(--primary-color-dark);
+}
+
+#add-newspaper-modal h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--text-color-light);
+    font-size: 1.5rem;
+}
+
+.dark-mode #add-newspaper-modal h2 {
+    color: var(--text-color-dark);
+}
+
+#add-newspaper-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#add-newspaper-form input,
+#add-newspaper-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--secondary-color-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all var(--transition-speed) ease;
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+}
+
+.dark-mode #add-newspaper-form input,
+.dark-mode #add-newspaper-form select {
+    background-color: var(--background-dark);
+    color: var(--text-color-dark);
+    border-color: var(--secondary-color-dark);
+}
+
+#add-newspaper-form input:focus,
+#add-newspaper-form select:focus {
+    outline: none;
+    border-color: var(--primary-color-light);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.dark-mode #add-newspaper-form input:focus,
+.dark-mode #add-newspaper-form select:focus {
+    border-color: var(--primary-color-dark);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.4);
+}
+
+#add-newspaper-form input[type="file"] {
+    padding: 10px;
+    border: 1px dashed var(--secondary-color-light);
+}
+
+.dark-mode #add-newspaper-form input[type="file"] {
+    border-color: var(--secondary-color-dark);
+}
+
+#add-newspaper-form button[type="submit"] {
+    background-color: var(--primary-color-light);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    margin-top: 10px;
+}
+
+#add-newspaper-form button[type="submit"]:hover {
+    background-color: var(--primary-color-light-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode #add-newspaper-form button[type="submit"] {
+    background-color: var(--primary-color-dark);
+}
+
+.dark-mode #add-newspaper-form button[type="submit"]:hover {
+    background-color: var(--primary-color-dark-hover);
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .newspaper-grid {
