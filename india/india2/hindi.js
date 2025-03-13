@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
             card.innerHTML = `
                 <img src="${newspaper.image}" alt="${newspaper.name}">
                 <h3>${newspaper.name}</h3>
-                <p class="newspaper-type">${newspaper.type}</p>
                 <div class="card-actions">
                     <button class="favorite-btn" data-name="${newspaper.name}">
                         <i class="fas ${favorites.includes(newspaper.name) ? 'fa-heart' : 'fa-heart-broken'}"></i>
