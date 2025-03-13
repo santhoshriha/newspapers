@@ -173,9 +173,14 @@ body.dark-mode {
 }
 
 .newspaper-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    padding-top: 30px;
     background-color: var(--card-background-light);
     border-radius: var(--border-radius);
-    padding: 15px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform var(--transition-speed) ease;
@@ -194,6 +199,59 @@ body.dark-mode {
     max-width: 100px;
     border-radius: 8px;
     margin-bottom: 10px;
+}
+
+.card-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.favorite-btn {
+    position: static;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-btn i {
+    font-size: 1rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.favorite-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.favorite-btn i.fa-heart {
+    color: #ff4136;
+    text-shadow: 0 0 10px rgba(255, 65, 54, 0.5);
+}
+
+.favorite-btn i.fa-heart-broken {
+    color: #7f8c8d;
+    text-shadow: 0 0 10px rgba(127, 140, 141, 0.3);
+}
+
+.dark-mode .favorite-btn:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.newspaper-card h3 {
+    margin-bottom: 10px;
+}
+
+.newspaper-card .newspaper-type {
+    display: none;
 }
 
 /* Modal Styles */
@@ -236,49 +294,6 @@ body.dark-mode {
     color: var(--secondary-color-dark);
 }
 
-/* Favorite Button Styles */
-.favorite-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    transition: all var(--transition-speed) ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.favorite-btn i {
-    font-size: 1.2rem;
-    transition: all var(--transition-speed) ease;
-}
-
-.favorite-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.favorite-btn i.fa-heart {
-    color: #ff4136;
-    text-shadow: 0 0 10px rgba(255, 65, 54, 0.5);
-}
-
-.favorite-btn i.fa-heart-broken {
-    color: #7f8c8d;
-    text-shadow: 0 0 10px rgba(127, 140, 141, 0.3);
-}
-
-.dark-mode .favorite-btn:hover {
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.card-actions {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .newspaper-grid {
@@ -301,12 +316,6 @@ body.dark-mode {
         text-align: center;
         margin-top: 10px;
         font-size: 0.9rem;
-    }
-
-    .newspaper-card .newspaper-type {
-        text-align: center;
-        font-size: 0.8rem;
-        margin-bottom: 10px;
     }
 
     .card-actions {
